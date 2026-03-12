@@ -124,6 +124,7 @@ jobs:
       - name: Run performance benchmarks
         env:
           OPENAI_APIKEY: ${{ secrets.OPENAI_APIKEY }}
+          ANTHROPIC_APIKEY: ${{ secrets.ANTHROPIC_APIKEY }}
         run: |
           uv run pytest tests/ -m benchmark --benchmark -v
 

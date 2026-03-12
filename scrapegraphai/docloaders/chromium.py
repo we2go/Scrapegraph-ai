@@ -54,12 +54,13 @@ class ChromiumLoader(BaseLoader):
         Raises:
             ImportError: If the required backend package is not installed.
         """
+        import_backend = "playwright" if backend == "playwright_scroll" else backend
         message = (
-            f"{backend} is required for ChromiumLoader. "
-            f"Please install it with `pip install {backend}`."
+            f"{import_backend} is required for ChromiumLoader. "
+            f"Please install it with `pip install {import_backend}`."
         )
 
-        dynamic_import(backend, message)
+        dynamic_import(import_backend, message)
 
         self.browser_config = kwargs
         self.headless = headless
