@@ -2,6 +2,9 @@
 .DS_Store?
 ._*
 
+# Scrape report history
+history/
+
 # Byte-compiled / optimized / DLL files
 **/__pycache__/
 *.py[cod]
@@ -195,3 +198,5 @@ dev.ipynb
 
 # CodeBeaver reports and artifacts
 .codebeaver
+instagram_state.json
+debug_login.py
